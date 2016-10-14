@@ -11,16 +11,38 @@
   </head>
   <body>
     <div class='container'>
-      <div class="sk-cube-grid">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
-        <div class="sk-cube sk-cube3"></div>
-        <div class="sk-cube sk-cube4"></div>
-        <div class="sk-cube sk-cube5"></div>
-        <div class="sk-cube sk-cube6"></div>
-        <div class="sk-cube sk-cube7"></div>
-        <div class="sk-cube sk-cube8"></div>
-        <div class="sk-cube sk-cube9"></div>
+      <div class="jumbotron">
+        <h1>Using github api</h1>
+        <h2>to get the username and there informaiton like repos</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <form>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" id="userName" class="form-control" placeholder="Username from Github">
+            </div>
+            <button type="button" class="btn btn-info">Get user from Github</button>
+          </form>
+        </div>
+
+        <div class="col-md-9">
+          <div class="loader">
+            <div class="sk-cube-grid">
+              <div class="sk-cube sk-cube1"></div>
+              <div class="sk-cube sk-cube2"></div>
+              <div class="sk-cube sk-cube3"></div>
+              <div class="sk-cube sk-cube4"></div>
+              <div class="sk-cube sk-cube5"></div>
+              <div class="sk-cube sk-cube6"></div>
+              <div class="sk-cube sk-cube7"></div>
+              <div class="sk-cube sk-cube8"></div>
+              <div class="sk-cube sk-cube9"></div>
+            </div>
+          </div>
+          <div class="content">
+          </div>
       </div>
     </div>
   </body>
