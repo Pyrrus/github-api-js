@@ -1,4 +1,8 @@
 $hide : none;
+$ht : 150px;
+$wd : 150px;
+$margin : 10px 10px 10px 10px; 
+
 
 #loader {
   display: $hide;
@@ -8,10 +12,14 @@ $hide : none;
   display: $hide;
 }
 
+.links {
+  margin: $margin;
+}
+
 // http://tobiasahlin.com/spinkit/
 .sk-cube-grid {
-  width: 40px;
-  height: 40px;
+  width: $wd;
+  height: $ht;
   margin: 100px auto;
 }
 

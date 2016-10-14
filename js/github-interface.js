@@ -33,23 +33,23 @@ $(document).ready(function() {
 	  		}
 
 	  		$('#content').append("<div class='row' id='first'></div>");
-	  		$('#first').append("<div class='col-md-6' class='box'>" + image + "</div>");
-	  		$('#first').append("<div class='col-md-6' class='box'>" + name + login + email + location + followers + following + public_repos + updated_at + madeAt + "</div>");
+	  		$('#first').append("<div class='col-md-4'>" + image + "</div>");
+	  		$('#first').append("<div class='col-md-6'>" + name + login + email + location + followers + following + public_repos + updated_at + madeAt + "</div>");
 	  	}
-  	});
-	
-  	if (found) {
-		github.getRepos(userName, howManyrepos, function(data) {
-			$('#content').append("<div class='row'><div class='col-md-12 box' id='next'></div></div>");
-		  	for (var i = 0; i < data.length; i++) {
-		  		var link = "<a href='" + data[i].html_url + "' class='btn btn-primary space' target='_blank'>" + data[i].name + "</a>";
-		  		$('#next').append(link);
-		  	}
-		});
-	}
 
-	$('#content').show();
-	$("#loader").hide();
+	  	if (found) {
+			github.getRepos(userName, howManyrepos, function(data) {
+				$('#content').append("<div class='row'><h1>" + userName + "\'s Repos</h1><div class='col-md-12' id='next'></div></div>");
+			  	for (var i = 0; i < data.length; i++) {
+			  		var link = "<a href='" + data[i].html_url + "' class='btn btn-primary links' target='_blank'>" + data[i].name + "</a>";
+			  		$('#next').append(link);
+			  	}
+			});
+		}
+
+		$('#content').show();
+		$("#loader").hide();
+  	});
   });
 });
 
