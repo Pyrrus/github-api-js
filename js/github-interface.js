@@ -22,9 +22,9 @@ $(document).ready(function() {
         var login = "<h2>Username: " + data.login + "</h2>";
         var location = "<h3>Location: " + data.location + "</h3>";
         var public_repos = "<h3>Public repos: " + data.public_repos + "</h3>";
-        var updated_at = "<h3>Last update: " + data.updated_at + "</h3>";
+        var updated_at = "<h3>Last update: " + moment(data.updated_at).format('MMM DD YYYY') + "</h3>";
         var image = "<img src='" + data.avatar_url + "' alt='" + data.name + "' class='img-responsive' />";
-        var madeAt = "<h3>Created at: " + data.created_at + "</h3>";
+        var madeAt = "<h3>Created at: " + moment(data.created_at).format('MMM DD YYYY') + "</h3>";
         var name = "";
         if (data.name === undefined) {
           name = "<h1>Name: " + data.login + "</h1>";
