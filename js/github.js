@@ -14,12 +14,16 @@ Github.prototype.getUser = function(userName, userDisplay) {
     });
 };
 
-Github.prototype.getRepos = function(userName, reposDisplay) {
-	var userRepos  = 'https://api.github.com/users/' + userName + '/repos?access_token=' + apiKey;
+Github.prototype.getRepos = function(userName, howMany, reposDisplay) {
+	console.log(reposDisplay);
+
+	var userRepos  = 'https://api.github.com/users/' + userName + '/repos?page=1&per_page=' + howMany + 'access_token=' + apiKey;
+	console.log(userRepos);
 	$.ajax({
       url: userRepos,
       complete: function(data) {
         reposDisplay.call(null, data.responseJSON);
+        // reposDisplay.call(null, null, data.responseJSON); will not work need
       }
     });
 }
