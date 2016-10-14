@@ -19,7 +19,13 @@ Github.prototype.getUser = function(userName, userDisplay) {
 };
 
 Github.prototype.getRepos = function(userName, howMany, reposDisplay) {
-  var userRepos = 'https://api.github.com/users/' + userName + '/repos?page=1&per_page=' + howMany;
+  var userRepos = "";
+
+  if (apiKey === undefined) {
+    userRepos = 'https://api.github.com/users/' + userName + '/repos?page=1&per_page=' + howMany;
+  } else {
+    userRepos = 'https://api.github.com/users/' + userName + '/repos?sort=update?access_token=' + apiKey;
+  }
   
   $.ajax({
     url: userRepos,
