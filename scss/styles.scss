@@ -1,6 +1,12 @@
+$hide : none;
 
+#loader {
+  display: $hide;
+}
 
-
+#content {
+  display: $hide;
+}
 
 // http://tobiasahlin.com/spinkit/
 .sk-cube-grid {
