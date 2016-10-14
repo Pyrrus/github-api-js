@@ -1,7 +1,19 @@
 var Github = require("./../js/github.js").githubModule;
 
-github = new Github();
+$(document).ready(function() {
 
-github.getUser("Pyrrus");
+  var github = new Github();
 
-github.getRepos("Pyrrus");
+  $('#find').click(function() {
+  	var userName = $('#userName').val();
+
+  	github.getUser(userName, function(data) {
+	  	console.log(data);
+  	});
+
+	//github.getRepos(userName);
+
+  });
+
+});
+
