@@ -5,7 +5,7 @@
 #### By **Adam Gorbahn**
 
 ## Description
-This site will git data from Github giving by the user. 
+This site will get user data from Github giving by the user. 
 
 ## Specifications
 
