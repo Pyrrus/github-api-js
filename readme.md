@@ -26,7 +26,7 @@ Type in the Username text fields| username giving by the user. It will display d
 
 ## code
 
-If you need to get the your access token
+If you need to get the access token use this link
 
 https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 
